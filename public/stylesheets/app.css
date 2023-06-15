@@ -1,0 +1,57 @@
+.card1, .card2 {
+    display: flex;
+    flex-direction: column;
+    border-width: 2px;
+    border-style: solid;
+    background-color: #f2f0d5;
+    border-color: #e1e1e1;
+    box-shadow: 10px 10px 5px #2d2c2c;
+    width: 50%;
+    align-items: center;
+    margin-bottom: 15vh;
+    margin-top: 5vh;
+    height: 30%;
+}
+
+#merriamWebster {
+    display: flex;
+    font-style: italic;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+#mwLogo {
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: contain;
+}
+
+.cardText {
+    padding: 2rem;
+}
+
+body {
+    background-image: url(../imgs/kevin-schmid-RV6-09J3HYU-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    color: #a8a8a8;
+    backdrop-filter: blur(0.1rem);
+}
+
+body > h1 {
+    text-align: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 1rem;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/app.css">
+    <title>Not Here</title>
+</head>
+<body>
+    <section class="container">
+        <article class="card1">
+            <h3>Introduction</h3>
+            <p class="cardText">Welcome. I'm <%= name %> and this is my talk on <%= subject %>. Merriam-Webster's 
+                defines <%= subject %> as 
+        </p>
+        </article>
+        <article class="card2">
+            <h3>Definition</h3>
+            <p class="cardText"id="merriamWebster">  
+                <img src="/imgs/MWLogo.png" alt="merriam-webster's logo" id="mwLogo"><br>
+            </p>
+            <p>
+                But we're not here to talk about that.
+            </p>
+        </article>
+    </section>
+    <script>
+        const dictionaryWord = async (arg) => {
+            const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${arg}?key=${'<%= apiKey %>'}`);
+            const dicData = await response.json();
+            const word = dicData[0];
+            const wordDef = word.shortdef[0];
+            let div = document.getElementById('merriamWebster');
+            div.innerHTML += `"${wordDef}"`;
+        } 
+    
+        dictionaryWord('<%= subject %>');
+    </script>
+</body>
+<footer>
+    <a href="/">Home</a>
+</footer>
+</html> 
+

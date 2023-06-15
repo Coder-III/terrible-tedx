@@ -1,0 +1,16 @@
+{
+  "name": "terribletedx",
+  "version": "1.0.0",
+  "description": "Terrible TedX talk template",
+  "main": "terribleTedX.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "coder-III",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.1.4",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  }
+}
