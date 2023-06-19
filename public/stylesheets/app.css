@@ -61,5 +61,40 @@ footer {
 }
 
 a:visited {
-   color:#a8a8a8;
+   color:#94e1e1;
+}
+
+header {
+    align-self: self-start;
+}
+
+.cardBtn {
+    border: #e1e1e1;
+    background-color: #f2f0d5;
+    box-shadow: 2px 2px 5px #2d2c2c;
+    margin-right: 1rem;
+    padding: 0.1rem 0.3rem;
+    width: 6rem;
+    height: 3rem;
+
+}
+
+#subject {
+    margin: 1rem;
+    background: #f5f5f500;
+    color: #fff;
+    border-style: hidden;
+    height: 2rem;
+    font-size: medium;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+#subject:hover {
+    background: #f5f5f542;
+}
+
+#quotes {
+    font-size: xxx-large;
+    font-style: italic;
 }
