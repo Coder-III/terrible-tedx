@@ -19,18 +19,26 @@
                 </p>
         </article>
         <article class="card2">
-            <p class="cardText merWText">
+            <p class="cardText merWText" id="merriamBoomer">
                 <img src="/imgs/MWLogo.png" alt="merriam-webster's logo" class="mwLogo"><br>
 
-                "New South Wales Torquay Newcastle South Australia ute the Kimberley then 
-                play Two-Up. Great Barrier Reef lilly pilly Cairns or crimson rosella licensed or BYO the 
-                lawn bowls. Eucalyptus Indian Pacific Railroad mozzie flat out Penfold's Grange the Salvos. 
-                To the South Australia blue-ringed octopus currawong from Mrs. Macquarie's Chair."
             </p>
             <p>
                 Back in MY day...
             </p>
         </article>
+    <script>
+        const dictionaryWord = async (arg) => {
+            const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${arg}?key=${'<%= apiKey %>'}`);
+            const dicData = await response.json();
+            const word = dicData[0];
+            const wordDef = word.shortdef[0];
+            let div = document.getElementById('merriamBoomer');
+            div.innerHTML += `"${wordDef}"`;
+        } 
+        
+            dictionaryWord('<%= subject %>');
+    </script>
 </body>
 <footer>
     <p>photo by <a href="https://unsplash.com/@lighttouchedphotography">Kevin Schmid</a> on <a href="https://unsplash.com/">Unsplash</a></p>

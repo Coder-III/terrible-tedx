@@ -25,7 +25,7 @@ app.post('/nothere', (req, res) =>{
 
 app.post('/boomer', (req, res) => {
     const {name, subject} = req.body;
-    res.render('boomer', {name, subject});
+    res.render('boomer', {name, subject, apiKey});
 })
 
 
