@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/app.css">
-    <title>Not Here</title>
+    <title>Quote</title>
 </head>
 <body>
     <header>
@@ -13,18 +13,21 @@
     </header>
     <section class="container">
         <article class="card1">
-            <h3>Introduction</h3>
+            <!-- <h3>Introduction</h3> -->
+            <p id="quoteText">&#8220; <%= quote[0].text %> &#8221;<br>
+            <sub id="quoteAtt">- <%= quote[0].attribution %></sub>
+            </p>
             <p class="cardText">Good morning/afternoon/evening. I'm <%= name %> and this is my talk 
                 on <%= subject %>. Merriam-Webster's defines <%= subject %> as... 
-        </p>
+            </p>
         </article>
         <article class="card2">
-            <p class="cardText merWText"id="merriamWebster">  
+            <p class="cardText merWText"id="quoteDef">  
                 <img src="/imgs/MWLogo.png" alt="merriam-webster's logo" class="mwLogo"><br>
             </p>
-            <p>
+            <!-- <p>
                 But we're not here to talk about that.
-            </p>
+            </p> -->
         </article>
     </section>
     <script>
@@ -33,7 +36,7 @@
             const dicData = await response.json();
             const word = dicData[0];
             const wordDef = word.shortdef[0];
-            let div = document.getElementById('merriamWebster');
+            let div = document.getElementById('quoteDef');
             div.innerHTML += `"${wordDef}"`;
         } 
     
