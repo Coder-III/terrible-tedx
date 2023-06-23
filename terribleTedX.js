@@ -7,7 +7,7 @@ const app = express();
 const port = 3000;
 const apiKey = process.env.MWAPI_KEY;
 const path = require('path');
-const quote = require('./utils/quote')
+const quote = require('./utils/quote');
 
 app.use(express.urlencoded({extended: true}));
 app.set('view engine', 'ejs');

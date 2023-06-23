@@ -13,9 +13,8 @@
     </header>
     <section class="container">
         <article class="card1">
-            <!-- <h3>Introduction</h3> -->
-            <p id="quoteText">&#8220; <%= quote[0].text %> &#8221;<br>
-            <sub id="quoteAtt">- <%= quote[0].attribution %></sub>
+            <p >&#8220; <span id="quoteText"><%= quote[0].text %></span> &#8221;<br>
+            <sub id="quoteAtt">-<%= quote[0].attribution %></sub>
             </p>
             <p class="cardText">Good morning/afternoon/evening. I'm <%= name %> and this is my talk 
                 on <%= subject %>. Merriam-Webster's defines <%= subject %> as... 
@@ -25,9 +24,6 @@
             <p class="cardText merWText"id="quoteDef">  
                 <img src="/imgs/MWLogo.png" alt="merriam-webster's logo" class="mwLogo"><br>
             </p>
-            <!-- <p>
-                But we're not here to talk about that.
-            </p> -->
         </article>
     </section>
     <script>
